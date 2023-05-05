@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-gnqa
+  namespace: mvp-demo-dev-namespace-hcgk-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:81b0a84d8198211e1f6b10d4deb9a578a3b0fd6c2ca5119007f4579079e2f8b5
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
